@@ -99,9 +99,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <div class="hero-image">
 
-        <img src="Assest/dro1.webp" alt="Drone">
+    <div class="slider">
+
+        <img src="Assest/dro1.webp" class="slide active">
+
+        <img src="Assest/dro2.webp" class="slide">
+
+        <img src="Assest/dro3.webp" class="slide">
+
+        <img src="Assest/dro4.webp" class="slide">
 
     </div>
+
+</div>
 
 </div>
 
@@ -935,6 +945,28 @@ closeBtn.addEventListener("click", function(){
     navMenu.classList.remove("active");
 
 });
+
+</script>
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+setInterval(() => {
+
+    slides[current].classList.remove("active");
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    slides[current].classList.add("active");
+
+}, 3000);
 
 </script>
 

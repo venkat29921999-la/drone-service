@@ -263,6 +263,42 @@ nav ul li a:hover{
     text-align:center;
 }
 
+
+.hero-slider{
+    position:relative;
+    width:100%;
+    max-width:550px;
+    height:400px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(37,99,235,.25);
+}
+
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+@media(max-width:768px){
+
+.hero-slider{
+    height:280px;
+    max-width:100%;
+}
+
+}
+
 .hero-image img{
 
     width:100%;
@@ -271,6 +307,29 @@ nav ul li a:hover{
     animation:floatImage 4s ease-in-out infinite;
 
     filter:drop-shadow(0 20px 40px rgba(37,99,235,.30));
+}
+
+
+.slider{
+    position:relative;
+    width:100%;
+    max-width:550px;
+    height:400px;
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
 }
 
 
