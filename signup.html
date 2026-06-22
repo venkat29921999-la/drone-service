@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign Up | StacklySky</title>
+
+<link rel="stylesheet" href="login.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- SIGNUP SECTION -->
+
+<section class="signup-section">
+
+<div class="signup-container">
+
+<!-- LEFT SIDE IMAGE -->
+
+<div class="signup-left">
+
+<img src="Assest/dro7.webp" alt="Signup Image">
+
+</div>
+
+
+<!-- RIGHT SIDE FORM -->
+
+<div class="signup-right">
+
+<div class="signup-logo">
+
+<img src="Assest/stacklylogo (1).webp" alt="StacklySky Logo">
+
+</div>
+
+<h2>Create Account</h2>
+
+<p>
+Join StacklySky and explore advanced drone solutions.
+</p>
+
+
+<form>
+
+<!-- Full Name -->
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+</div>
+
+
+<!-- Email -->
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input type="email"
+placeholder="Email Address"
+required>
+
+</div>
+
+
+<!-- Phone -->
+
+<div class="input-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<input type="tel"
+placeholder="Phone Number"
+required>
+
+</div>
+
+<!-- Role -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-user-shield"></i>
+
+    <select required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+    </select>
+
+</div>
+
+
+<!-- Password -->
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input type="password"
+placeholder="Password"
+required>
+
+</div>
+
+
+<!-- Confirm Password -->
+
+<div class="input-box">
+
+<i class="fa-solid fa-key"></i>
+
+<input type="password"
+placeholder="Confirm Password"
+required>
+
+</div>
+
+
+<button type="submit" class="signup-submit">
+
+Create Account
+
+</button>
+
+</form>
+
+
+<div class="signup-bottom">
+
+<p>
+
+Already have an account?
+
+<a href="login.html">
+Login
+</a>
+
+</p>
+
+</div>
+
+
+<div class="back-home">
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+Back To Home
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+const signupForm = document.querySelector("form");
+
+signupForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const inputs = document.querySelectorAll("input");
+
+    let empty = false;
+
+    inputs.forEach(input => {
+
+        if(input.value === ""){
+            empty = true;
+        }
+
+    });
+
+    if(empty){
+
+        alert("Please fill all fields.");
+
+        return;
+    }
+
+    const password =
+document.querySelectorAll('input[type="password"]')[0].value;
+
+const confirmPassword =
+document.querySelectorAll('input[type="password"]')[1].value;
+
+    if(password !== confirmPassword){
+
+        alert("Passwords do not match!");
+
+        return;
+    }
+
+    alert("Account Created Successfully!");
+
+    window.location.href = "login.html";
+
+});
+
+</script>
+
+</body>
+</html>

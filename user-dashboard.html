@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard | StacklySky</title>
+
+<link rel="stylesheet" href="user.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="close-btn"
+    onclick="toggleSidebar()">
+        ✕
+    </div>
+
+    <div class="logo-section">
+
+        <h2>Stack<span>Ly</span></h2>
+
+        <p>USER PANEL</p>
+
+    </div>
+
+
+    <h4 class="menu-title">MAIN</h4>
+
+    <ul>
+
+        <li class="menu-item active"
+        onclick="showSection('dashboard',this)">
+
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+
+        </li>
+
+
+        <li class="menu-item"
+        onclick="showSection('services',this)">
+
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            Services
+
+        </li>
+
+
+        <li class="menu-item"
+        onclick="showSection('bookings',this)">
+
+            <i class="fa-solid fa-calendar-check"></i>
+            My Bookings
+
+        </li>
+
+
+        <li class="menu-item"
+        onclick="showSection('reports',this)">
+
+            <i class="fa-solid fa-file-lines"></i>
+            Flight Reports
+
+        </li>
+
+
+        <li class="menu-item"
+        onclick="showSection('profile',this)">
+
+            <i class="fa-solid fa-user"></i>
+            Profile
+
+        </li>
+
+    </ul>
+
+
+    <h4 class="menu-title">SYSTEM</h4>
+
+    <ul>
+
+        <li onclick="window.location.href='login.html'">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+    <div class="topbar">
+
+<h1>Welcome Back 👋</h1>
+
+<button class="menu-btn"
+onclick="toggleSidebar()">
+☰
+</button>
+
+</div>
+
+
+    <!-- DASHBOARD -->
+
+    <div id="dashboard" class="content-section">
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h3>Total Bookings</h3>
+
+                <h2>08</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-drone"></i>
+
+                <h3>Services Used</h3>
+
+                <h2>05</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <h3>Reports Received</h3>
+
+                <h2>06</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Loyalty Points</h3>
+
+                <h2>850</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <div id="services"
+    class="content-section"
+    style="display:none;">
+
+        <div class="table-section">
+
+            <h2>Available Services</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Service</th>
+                    <th>Category</th>
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Aerial Photography</td>
+                    <td>Media</td>
+                    <td>Available</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Survey & Mapping</td>
+                    <td>Industrial</td>
+                    <td>Available</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Agriculture Monitoring</td>
+                    <td>Farming</td>
+                    <td>Available</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOOKINGS -->
+
+    <div id="bookings"
+    class="content-section"
+    style="display:none;">
+
+        <div class="table-section">
+
+            <h2>My Bookings</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Booking ID</th>
+                    <th>Service</th>
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>#BK001</td>
+                    <td>Aerial Photography</td>
+                    <td>Completed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#BK002</td>
+                    <td>Survey Mapping</td>
+                    <td>In Progress</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- REPORTS -->
+
+    <div id="reports"
+    class="content-section"
+    style="display:none;">
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Farm Monitoring Report</h3>
+
+                <h2>Available</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Construction Survey Report</h3>
+
+                <h2>Available</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE -->
+
+    <div id="profile"
+    class="content-section"
+    style="display:none;">
+
+        <div class="table-section">
+
+            <h2>User Profile</h2>
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <td>Selva Kumar</td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td>selva@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <th>User ID</th>
+                    <td>SK001</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function toggleSidebar(){
+
+    document.querySelector(".sidebar")
+    .classList.toggle("show");
+
+    document.querySelector(".overlay")
+    .classList.toggle("active");
+
+}
+
+
+function showSection(sectionId, element){
+
+    document.querySelectorAll(".content-section")
+    .forEach(section => {
+
+        section.style.display = "none";
+
+    });
+
+    document.getElementById(sectionId)
+    .style.display = "block";
+
+
+    document.querySelectorAll(".menu-item")
+    .forEach(item => {
+
+        item.classList.remove("active");
+
+    });
+
+    element.classList.add("active");
+
+
+    if(window.innerWidth <= 768){
+
+        document.querySelector(".sidebar")
+        .classList.remove("show");
+
+        document.querySelector(".overlay")
+        .classList.remove("active");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | StacklySky</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="close-btn"
+onclick="toggleSidebar()">
+✕
+</div>
+
+<div class="logo-section">
+
+<h2>Stack<span>Ly</span></h2>
+
+<p>ADMIN PANEL</p>
+
+</div>
+
+
+<h4 class="menu-title">MAIN</h4>
+
+<ul>
+
+<li class="menu-item active"
+onclick="showSection('dashboard',this)">
+
+<i class="fa-solid fa-gauge"></i>
+Dashboard
+
+</li>
+
+
+<li class="menu-item"
+onclick="showSection('users',this)">
+
+<i class="fa-solid fa-users"></i>
+Users
+
+</li>
+
+
+<li class="menu-item"
+onclick="showSection('fleet',this)">
+
+<i class="fa-solid fa-helicopter"></i>Drone Fleet
+
+</li>
+
+
+<li class="menu-item"
+onclick="showSection('bookings',this)">
+
+<i class="fa-solid fa-calendar-check"></i>
+Bookings
+
+</li>
+
+
+<li class="menu-item"
+onclick="showSection('reports',this)">
+
+<i class="fa-solid fa-chart-line"></i>
+Reports
+
+</li>
+
+
+<li class="menu-item"
+onclick="showSection('settings',this)">
+
+<i class="fa-solid fa-gear"></i>
+Settings
+
+</li>
+
+</ul>
+
+
+<h4 class="menu-title">SYSTEM</h4>
+
+<ul>
+
+<li onclick="window.location.href='login.html'">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+ 
+    <div class="topbar">
+
+<h1>Welcome Back 👋</h1>
+
+<button class="menu-btn"
+onclick="toggleSidebar()">
+☰
+</button>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="content-section">
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Total Users</h3>
+
+<h2>1240</h2>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h3>Total Bookings</h3>
+
+<h2>560</h2>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-drone"></i>
+
+<h3>Active Drones</h3>
+
+<h2>32</h2>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-indian-rupee-sign"></i>
+
+<h3>Revenue</h3>
+
+<h2>₹4.5L</h2>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- USERS -->
+
+<div id="users"
+class="content-section"
+style="display:none;">
+
+<div class="table-section">
+
+<h2>Users</h2>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Selva Kumar</td>
+<td>selva@gmail.com</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>Arun Kumar</td>
+<td>arun@gmail.com</td>
+<td>Active</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+
+<!-- DRONE FLEET -->
+
+<div id="fleet"
+class="content-section"
+style="display:none;">
+
+<div class="cards">
+
+<div class="card">
+
+<h3>DJI Mavic 3</h3>
+
+<h2>Available</h2>
+
+</div>
+
+
+<div class="card">
+
+<h3>DJI Phantom 4</h3>
+
+<h2>In Service</h2>
+
+</div>
+
+
+<div class="card">
+
+<h3>Autel EVO II</h3>
+
+<h2>Available</h2>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- BOOKINGS -->
+
+<div id="bookings"
+class="content-section"
+style="display:none;">
+
+<div class="table-section">
+
+<h2>Recent Bookings</h2>
+
+<table>
+
+<tr>
+<th>Customer</th>
+<th>Service</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Selva Kumar</td>
+<td>Drone Inspection</td>
+<td>Pending</td>
+</tr>
+
+<tr>
+<td>Arun Kumar</td>
+<td>Aerial Mapping</td>
+<td>Completed</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+
+<!-- REPORTS -->
+
+<div id="reports"
+class="content-section"
+style="display:none;">
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Monthly Revenue</h3>
+
+<h2>₹4.5L</h2>
+
+</div>
+
+
+<div class="card">
+
+<h3>Total Flights</h3>
+
+<h2>50K+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SETTINGS -->
+
+<div id="settings"
+class="content-section"
+style="display:none;">
+
+<div class="table-section">
+
+<h2>Admin Settings</h2>
+
+<p>Manage drone services and system settings.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function toggleSidebar(){
+
+document.querySelector(".sidebar")
+.classList.toggle("show");
+
+document.querySelector(".overlay")
+.classList.toggle("active");
+
+}
+
+
+function showSection(sectionId, element){
+
+document.querySelectorAll(".content-section")
+.forEach(section => {
+
+section.style.display = "none";
+
+});
+
+document.getElementById(sectionId)
+.style.display = "block";
+
+
+document.querySelectorAll(".menu-item")
+.forEach(item => {
+
+item.classList.remove("active");
+
+});
+
+element.classList.add("active");
+
+
+if(window.innerWidth <= 768){
+
+document.querySelector(".sidebar")
+.classList.remove("show");
+
+document.querySelector(".overlay")
+.classList.remove("active");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

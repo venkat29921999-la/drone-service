@@ -1,0 +1,1325 @@
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+body{
+    background:#0F172A;
+    padding-top:90px;
+}
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    height:90px;   /* ADD THIS */
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.logo img{
+
+    width:140px;
+
+    height:70px;
+
+    object-fit:contain;
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+}
+
+nav ul li a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+nav ul li a:hover{
+
+    color:#2563EB;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    transition:.4s;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn{
+    display:none;
+}
+
+.close-btn{
+    display:none;
+}
+
+.mobile-login-btn{
+    display:none;
+}
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:100px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content span{
+
+    color:#60A5FA;
+
+    font-weight:600;
+}
+
+.hero-content h1{
+
+    color:white;
+
+   font-size:72px;
+    word-break:break-word;
+
+    line-height:1.1;
+
+    margin:20px 0;
+}
+
+.hero-content p{
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    transition:.4s;
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+}
+
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    transition:.4s;
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#0F172A;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+
+    width:100%;
+    max-width:550px;
+
+    animation:floatImage 4s ease-in-out infinite;
+
+    filter:drop-shadow(0 20px 40px rgba(37,99,235,.30));
+}
+
+
+/* FLOAT ANIMATION */
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-size:48px;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.section-title p{
+
+    color:#CBD5E1;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+
+.categories{
+
+    padding:100px 0;
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.category-card{
+
+    background:rgba(255,255,255,.96);
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.category-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(37,99,235,.20);
+}
+
+.icon{
+
+    width:90px;
+    height:90px;
+
+    background:#EFF6FF;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.icon i{
+
+    font-size:35px;
+
+    color:#2563EB;
+}
+
+.category-card h3{
+
+    color:#111827;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.category-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+/* ==========================
+   FEATURED DRONES
+========================== */
+
+.products{
+
+    padding:100px 0;
+}
+
+
+/* ==========================
+   WHY CHOOSE US
+========================== */
+
+.why-us{
+
+    padding:100px 0;
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.why-card{
+
+    background:rgba(255,255,255,.96);
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.why-card:hover{
+
+    transform:translateY(-12px);
+}
+
+.why-card i{
+
+    font-size:45px;
+
+    color:#2563EB;
+
+    margin-bottom:25px;
+}
+
+.why-card h3{
+
+    color:#111827;
+
+    margin-bottom:15px;
+}
+
+.why-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+/* ==========================
+   STATISTICS SECTION
+========================== */
+
+.stats{
+
+    background:#111827;
+
+    padding:100px 0;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.stat-box{
+
+    text-align:center;
+}
+
+.stat-box h2{
+
+    color:#2563EB;
+
+    font-size:55px;
+
+    margin-bottom:15px;
+}
+
+.stat-box p{
+
+    color:#CBD5E1;
+}
+
+
+/* ==========================
+   PROCESS SECTION
+========================== */
+
+.process{
+
+    padding:100px 0;
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.process-card{
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.process-number{
+
+    width:70px;
+    height:70px;
+
+    background:#2563EB;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+.process-card h3{
+
+    color:#111827;
+
+    margin-bottom:15px;
+}
+
+.process-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+
+
+
+
+.technology{
+
+    padding:100px 0;
+
+    background:#111827;
+}
+
+.technology-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:80px;
+}
+
+.technology-image{
+    flex:1;
+}
+
+.technology-image img{
+
+    width:100%;
+
+    border-radius:30px;
+}
+
+.technology-content{
+    flex:1;
+}
+
+.technology-content span{
+
+    color:#60A5FA;
+
+    font-weight:600;
+}
+
+.technology-content h2{
+
+    color:white;
+
+    font-size:50px;
+
+    margin:20px 0;
+}
+
+.technology-content p{
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+}
+
+.tech-feature{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+}
+
+.tech-feature i{
+
+    color:#2563EB;
+
+    margin-right:15px;
+}
+
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials{
+
+    padding:100px 0;
+}
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.testimonial-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.stars{
+
+    color:#F59E0B;
+
+    margin-bottom:20px;
+}
+
+.testimonial-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+.testimonial-card h3{
+
+    color:#111827;
+}
+
+.testimonial-card span{
+
+    color:#2563EB;
+}
+
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq{
+
+    padding:100px 0;
+}
+
+.faq-box{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.faq-item{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.faq-item h3{
+
+    color:#111827;
+
+    margin-bottom:15px;
+}
+
+.faq-item p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+
+    background:#081321;
+
+    padding:90px 0 30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1.3fr;
+    gap:60px;
+    align-items:start;
+}
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+}
+
+.footer-column img{
+
+    width:150px;
+
+    margin-bottom:25px;
+}
+
+.footer-column h3{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.footer-column p{
+    color:#CBD5E1;
+    line-height:1.8;
+    font-size:16px;
+    max-width:260px;
+}
+
+.footer-column ul{
+
+    padding:0;
+}
+
+.footer-column ul li{
+
+    margin-bottom:20px;
+}
+
+.footer-column ul li a{
+    color:#CBD5E1;
+    font-size:16px;
+    transition:.3s;
+}
+
+.footer-column ul li a:hover{
+
+    color:#2563EB;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+    color:#CBD5E1;
+    font-size:16px;
+}
+
+.company-column{
+    padding-right:40px;
+}
+
+.company-column img{
+    width:150px;
+    margin-bottom:20px;
+}
+
+.contact-item i{
+
+    color:#2563EB;
+
+    font-size:22px;
+}
+
+.footer-bottom{
+
+    margin-top:60px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:30px;
+
+    text-align:center;
+}
+
+.footer-bottom p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+}
+
+
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.close-btn{
+
+    display:none;
+}
+
+.mobile-login-btn{
+
+    display:none;
+}
+
+
+
+
+
+
+
+.service-hero{
+    padding:58px 0 120px;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
+    url("Assest/drone1.webp");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.service-hero h1{
+    font-size:65px;
+    color:white;
+    margin:20px 0;
+}
+
+.service-hero p{
+    color:#CBD5E1;
+}
+
+.service-section{
+    padding:10px 0;
+}
+
+.service-box{
+    display:flex;
+    align-items:center;
+    gap:80px;
+}
+
+.service-image{
+    flex:1;
+}
+
+.service-image img{
+    width:100%;
+    border-radius:30px;
+}
+
+.service-content{
+    flex:1;
+}
+
+.service-content h2{
+    color:white;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.service-content p{
+    color:#CBD5E1;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.service-content ul{
+    margin-bottom:30px;
+}
+
+.service-content ul li{
+    color:white;
+    margin-bottom:15px;
+}
+
+.service-content i{
+    color:#2563EB;
+}
+
+
+
+
+/* ======================
+INDUSTRIES SECTION
+====================== */
+
+.industries-home{
+    padding:100px 0;
+}
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.industry-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    padding:40px 30px;
+    text-align:center;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.4s;
+}
+
+.industry-card:hover{
+    transform:translateY(-10px);
+}
+
+.industry-card i{
+    font-size:50px;
+    color:#00C2FF;
+    margin-bottom:25px;
+}
+
+.industry-card h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+.industry-card p{
+    color:#CBD5E1;
+}
+
+
+.industry-hero{
+    padding:22px 0 120px;
+
+    background:
+    linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.90)),
+    url("Assest/drone1.webp");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.industry-hero .hero-content{
+    max-width:750px;
+}
+
+.industry-hero span{
+    color:#60A5FA;
+    font-weight:600;
+}
+
+.industry-hero h1{
+    color:white;
+    font-size:72px;
+    margin:20px 0;
+    line-height:1.1;
+}
+
+.industry-hero p{
+    color:#CBD5E1;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+
+/* ======================
+DRONE FLEET
+====================== */
+
+.drone-fleet{
+    padding:100px 0;
+}
+
+.fleet-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.fleet-card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    transition:.4s;
+}
+
+.fleet-card:hover{
+    transform:translateY(-12px);
+}
+
+.fleet-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:25px;
+}
+
+.fleet-card h3{
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.fleet-card p{
+    color:#64748B;
+    line-height:1.8;
+}
+
+
+
+
+.industry-hero{
+    padding:140px 0 100px;
+    background:#0F172A;
+}
+
+.industry-hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:90px;
+}
+
+.industry-hero-content{
+    flex:1;
+}
+
+.industry-hero-content span{
+    color:#60A5FA;
+    font-weight:600;
+}
+
+.industry-hero-content h1{
+    color:white;
+    font-size:65px;
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.industry-hero-content p{
+    color:#CBD5E1;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.industry-hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.industry-hero-image img{
+    width:100%;
+    max-width:550px;
+    border-radius:30px;
+    filter:drop-shadow(0 20px 40px rgba(37,99,235,.30));
+}
+
+/* MOBILE */
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    body{
+        padding-top:80px;
+    }
+
+    .container{
+        width:92%;
+        overflow:hidden;
+    }
+
+    /* HERO */
+    .hero-container,
+    .technology-container,
+    .service-box,
+    .industry-hero-container,
+    .story-container,
+    .form-container{
+        flex-direction:column;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-content,
+    .hero-image,
+    .service-content,
+    .service-image,
+    .technology-content,
+    .technology-image{
+        width:100%;
+    }
+
+    .hero-content h1,
+    .industry-hero-content h1,
+    .service-hero h1,
+    .about-hero h1,
+    .contact-hero h1{
+        font-size:40px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    /* HERO BUTTONS */
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        display:block;
+        text-align:center;
+    }
+
+    /* IMAGES */
+    .hero-image img,
+    .service-image img,
+    .technology-image img,
+    .industry-hero-image img{
+        width:100%;
+        max-width:320px;
+        margin:auto;
+    }
+
+    /* ALL GRIDS */
+    .category-grid,
+    .why-grid,
+    .stats-grid,
+    .process-grid,
+    .industry-grid,
+    .fleet-grid,
+    .testimonial-grid,
+    .gallery-grid,
+    .mission-grid,
+    .footer-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    /* TITLES */
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .section-title p{
+        font-size:15px;
+    }
+
+    /* NAVBAR */
+    .menu-btn{
+        display:block;
+        color:white;
+        font-size:28px;
+        cursor:pointer;
+    }
+
+    .nav-right .login-btn{
+        display:none;
+    }
+
+    nav{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:100%;
+        height:100vh;
+        background:#0F172A;
+        padding:40px 30px;
+        transition:.4s;
+        z-index:9999;
+    }
+
+    nav.active{
+        right:0;
+    }
+
+    .close-btn{
+        display:block;
+        color:white;
+        font-size:32px;
+        text-align:right;
+        cursor:pointer;
+        margin-bottom:40px;
+    }
+
+    nav ul{
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+    }
+
+    nav ul li a{
+        font-size:22px;
+        color:white;
+    }
+
+    .mobile-login-btn{
+        display:block;
+        background:#2563EB;
+        color:white;
+        padding:15px;
+        border-radius:40px;
+        text-align:center;
+        margin-top:35px;
+    }
+}
